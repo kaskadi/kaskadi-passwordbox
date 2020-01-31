@@ -15,8 +15,8 @@ describe('kaskadi-passwordbox', () => {
   it('should apply the "Password" font-family to the input text container', () => {
     const elem = document.body.querySelector('kaskadi-passwordbox')
     const textbox = elem.shadowRoot.querySelector('kaskadi-textbox')
-    const textStyle = getComputedStyle(textbox.shadowRoot.querySelector('#text'))
-    textStyle['font-family'].should.equal('Password')
+    const textStyle = getComputedStyle(textbox.shadowRoot.querySelector('#text'))['font-family'].replace(new RegExp(/"/, 'g'), '') // need to replace double quotes by nothing because Firefox getComputedStyle returns the font wrapped in double quotes
+    textStyle.should.equal('Password')
   })
   it('should remove from the head the link to load "Password" font when removed from the DOM', () => {
     const elem = document.body.querySelector('kaskadi-passwordbox')
