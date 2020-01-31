@@ -1,4 +1,4 @@
 @font-face {
     font-family: "Password";
-    src: url("https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/pwd-font.ttf") format("truetype");
+    src: url("./pwd-font.ttf") format("truetype");
 }

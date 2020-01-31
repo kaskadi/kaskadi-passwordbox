@@ -2,7 +2,7 @@ const fs = require('fs')
 const svg2ttf = require('svg2ttf')
 
 let glyphs = ''
-for (let i=0; i<128; i++) {
+for (let i = 0; i < 128; i++) {
   glyphs += `    <glyph unicode="&#${i};" d="M50,500 a 450,450 0 1,0 900,0 a 450,450 0 1,0 -900,0"></glyph>`
   if (i !== 127) {
     glyphs += '\n'
