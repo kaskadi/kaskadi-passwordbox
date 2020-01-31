@@ -9,6 +9,20 @@ module.exports = config => {
       pattern: '**/*.js',
       included: false,
       type: 'module'
+    },
+    {
+      pattern: 'import-font.css',
+      watched: false,
+      included: false,
+      served: true,
+      nocache: false
+    },
+    {
+      pattern: 'pwd-font.ttf',
+      watched: false,
+      included: false,
+      served: true,
+      nocache: false
     }],
     preprocessors: { '*.js': 'coverage' },
     coverageReporter: {

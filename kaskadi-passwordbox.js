@@ -3,6 +3,8 @@
 import { KaskadiElement, css, html } from 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-element/kaskadi-element.js'
 import 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-textbox/kaskadi-textbox.js'
 
+const cssFontLoadPath = window.location.href.includes('localhost') ? window.location.pathname.includes('example') ? '../import-font.css' : './import-font.css' : 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css'
+
 class KaskadiPasswordbox extends KaskadiElement {
   constructor () {
     super()
@@ -37,12 +39,12 @@ class KaskadiPasswordbox extends KaskadiElement {
     fontLoadLink.rel = 'stylesheet'
     fontLoadLink.type = 'text/css'
     fontLoadLink.crossOrigin = 'anonymous'
-    fontLoadLink.href = 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css'
+    fontLoadLink.href = cssFontLoadPath
     document.head.appendChild(fontLoadLink)
   }
 
   disconnectedCallback () {
-    const fontLoadLink = document.head.querySelector('link[href="https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css"]')
+    const fontLoadLink = document.head.querySelector(`link[href="${cssFontLoadPath}"]`)
     document.head.removeChild(fontLoadLink)
     super.disconnectedCallback()
   }
