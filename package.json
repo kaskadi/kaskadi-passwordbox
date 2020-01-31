@@ -41,6 +41,14 @@
         {
           "src": "example/index.html",
           "dest": "modules/@kaskadi/kaskadi-passwordbox/{branch}example/index.html"
+        },
+        {
+          "src": "font-generator/pwd-font.ttf",
+          "dest": "modules/@kaskadi/kaskadi-passwordbox/{branch}pwd-font.ttf"
+        },
+        {
+          "src": "import-font.css",
+          "dest": "modules/@kaskadi/kaskadi-passwordbox/{branch}import-font.css"
         }
       ]
     }
