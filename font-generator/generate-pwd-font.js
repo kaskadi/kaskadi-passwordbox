@@ -6,7 +6,7 @@ const r = 400
 const cx = 500
 const cy = 500
 for (let i = 0; i < 128; i++) {
-  glyphs += `    <glyph unicode="&#${i};" d="M${cx-r},${cy} a ${r},${r} 0 1,0 ${r*2},0 a ${r},${r} 0 1,0 -${r*2},0"></glyph>`
+  glyphs += `    <glyph unicode="&#${i};" d="M${cx-r},${cy-r} a ${r},${r} 0 1,0 ${r*2},0 a ${r},${r} 0 1,0 -${r*2},0"></glyph>`
   if (i !== 127) {
     glyphs += '\n'
   }
