@@ -7,7 +7,7 @@ on:
     paths:
       - '**.js'
       - 'import-font.css'
-      - 'font-generator/pwd-font.ttf'
+      - 'pwd-font.ttf'
       - 'example/index.html'
       - 'package.json'
 jobs:

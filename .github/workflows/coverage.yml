@@ -6,6 +6,8 @@ on:
       - '!release/**'
     paths:
       - '**.js'
+      - 'import-font.css'
+      - 'pwd-font.ttf'
 jobs:
   coverage:
     runs-on: ubuntu-latest
