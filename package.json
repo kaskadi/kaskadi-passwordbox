@@ -43,7 +43,7 @@
           "dest": "modules/@kaskadi/kaskadi-passwordbox/{branch}example/index.html"
         },
         {
-          "src": "font-generator/pwd-font.ttf",
+          "src": "pwd-font.ttf",
           "dest": "modules/@kaskadi/kaskadi-passwordbox/{branch}pwd-font.ttf"
         },
         {
