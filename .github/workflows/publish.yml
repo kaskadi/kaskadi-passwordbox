@@ -6,6 +6,8 @@ on:
       - 'release/**'
     paths:
       - '**.js'
+      - 'import-font.css'
+      - 'font-generator/pwd-font.ttf'
       - 'example/index.html'
       - 'package.json'
 jobs:
