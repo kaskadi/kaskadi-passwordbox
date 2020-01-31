@@ -10,7 +10,7 @@ describe('kaskadi-passwordbox', () => {
   })
   it('should attach to the head the link to load "Password" font when attached to the DOM', () => {
     const link = document.head.querySelector('link[href="https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css"]')
-    link.should.exist
+    link.should.not.equal(null)
   })
   it('should apply the "Password" font-family to the input text container', () => {
     const elem = document.body.querySelector('kaskadi-passwordbox')
@@ -24,7 +24,7 @@ describe('kaskadi-passwordbox', () => {
     // wait a bit until disconnectedCallback() is done working in kaskadi-passwordbox
     setTimeout(() => {
       const link = document.head.querySelector('link[href="https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css"]')
-      link.should.not.exist
+      link.should.equal(null)
     }, 2000)
   })
 })

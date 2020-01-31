@@ -31,7 +31,7 @@ class KaskadiPasswordbox extends KaskadiElement {
     }
   }
 
-  connectedCallback() {
+  connectedCallback () {
     super.connectedCallback()
     const fontLoadLink = document.createElement('link')
     fontLoadLink.rel = 'stylesheet'
@@ -40,7 +40,8 @@ class KaskadiPasswordbox extends KaskadiElement {
     fontLoadLink.href = 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css'
     document.head.appendChild(fontLoadLink)
   }
-  disconnectedCallback() {
+
+  disconnectedCallback () {
     const fontLoadLink = document.head.querySelector('link[href="https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css"]')
     document.head.removeChild(fontLoadLink)
     super.disconnectedCallback()
