@@ -17,7 +17,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg">
     <font-face font-family="Password" font-weight="bold" font-style="normal"
         units-per-em="1000" cap-height="1000" x-height="1000"
         ascent="1000" descent="0"
-        alphabetic="0" hanging="1000" />
+        alphabetic="0" hanging="1000" middle="500" dominant-baseline="middle"/>
 ${glyphs}
   </font>
 </svg>`
