@@ -1,29 +1,7 @@
 module.exports = config => {
   config.set({
     frameworks: ['mocha', 'chai'],
-    files: [{
-      pattern: 'test/**/*.test.js',
-      type: 'module'
-    },
-    {
-      pattern: '**/*.js',
-      included: false,
-      type: 'module'
-    },
-    {
-      pattern: 'import-font.css',
-      watched: false,
-      included: false,
-      served: true,
-      nocache: false
-    },
-    {
-      pattern: 'pwd-font.ttf',
-      watched: false,
-      included: false,
-      served: true,
-      nocache: false
-    }],
+    files: [{ pattern: 'test/**/*.test.js', type: 'module' }, { pattern: '**/*.js', included: false, type: 'module' }, { pattern: 'import-font.css', watched: false, included: false, type: 'dom' }, { pattern: 'pwd-font.ttf', watched: false, included: false, type: 'dom' }],
     preprocessors: { '*.js': 'coverage' },
     coverageReporter: {
       dir: 'coverage',
