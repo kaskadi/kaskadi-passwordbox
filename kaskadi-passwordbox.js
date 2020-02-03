@@ -51,7 +51,7 @@ class KaskadiPasswordbox extends KaskadiElement {
 
   render () {
     return html`
-    <kaskadi-textbox id="pwd-box" lang="${this.lang}" ?labelHidden="${this.labelHidden}" icon="${this.icon}" .label="${this.label}"></kaskadi-textbox>`
+    <kaskadi-textbox id="pwd-box" lang="${this.lang}" ?labelHidden="${this.labelHidden}" icon="${this.icon}" .label="${this.label}" spellcheck="false"></kaskadi-textbox>`
   }
 }
 customElements.define('kaskadi-passwordbox', KaskadiPasswordbox)
