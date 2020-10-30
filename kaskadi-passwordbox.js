@@ -13,9 +13,9 @@ const cssFontLoadPath = window.location.href.includes('localhost') ? window.loca
  *
  * @module kaskadi-passwordbox
  *
- * @param {Object} label - a set of labels that will be displayed for this textbox. Each field in the object reference to a language (f.e. `en`, `de`, `fr`, etc.).
+ * @param {Object} label - a localized set of labels that will be displayed for this textbox. Each field in the object references a language (f.e. `en`, `de`, `fr`, etc.).
  * @param {string} [icon] - an icon to display for this textbox. Must be a URL pointing to a public image.
- * @param {boolean} [labelHidden=false] - control whether the textbox label & icon should be shown.
+ * @param {boolean} [labelHidden=false] - controls whether the textbox label & icon should be shown.
  *
  * @example
  *
