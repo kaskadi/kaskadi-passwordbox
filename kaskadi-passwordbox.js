@@ -43,7 +43,7 @@ class KaskadiPasswordbox extends KaskadiElement {
   static get properties () {
     return {
       labelHidden: { type: Boolean },
-      label: { type: Array },
+      label: { type: Object },
       icon: { type: String }
     }
   }
