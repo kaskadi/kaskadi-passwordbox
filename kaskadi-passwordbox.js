@@ -1,15 +1,31 @@
 /* eslint-env browser, mocha */
-// import { css, html } from 'https://cdn.klimapartner.net/modules/lit-element/lit-element.js'
 import { KaskadiElement, css, html } from 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-element/kaskadi-element.js'
 import 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-textbox/kaskadi-textbox.js'
 
 const cssFontLoadPath = window.location.href.includes('localhost') ? window.location.pathname.includes('example') ? '../import-font.css' : './import-font.css' : 'https://cdn.klimapartner.net/modules/@kaskadi/kaskadi-passwordbox/import-font.css'
 
+/**
+ * Element to offer a textbox for inputting password.
+ *
+ * User input will be obfuscated to make password invisible to other users watching the same screen.
+ *
+ * This element inherits properties from a base class `KaskadiElement`. To see which properties are available, please refer to [`KaskadiElement` documentation](https://github.com/kaskadi/kaskadi-element).
+ *
+ * @module kaskadi-passwordbox
+ *
+ * @param {Object} label - a set of labels that will be displayed for this textbox. Each field in the object reference to a language (f.e. `en`, `de`, `fr`, etc.).
+ * @param {string} [icon] - an icon to display for this textbox. Must be a URL pointing to a public image.
+ * @param {boolean} [labelHidden=false] - control whether the textbox label & icon should be shown.
+ *
+ * @example
+ *
+ * <kaskadi-passwordbox lang="en" label='{"en": "Password", "de": "Passwort", "fr": "Mot de passe"}' icon="https://example.com/lock.png"></kaskadi-passwordbox>
+ */
+
 class KaskadiPasswordbox extends KaskadiElement {
   constructor () {
     super()
     this.labelHidden = false
-    this.lang = 'en'
     this.icon = ''
   }
 
@@ -26,7 +42,6 @@ class KaskadiPasswordbox extends KaskadiElement {
 
   static get properties () {
     return {
-      lang: { type: String },
       labelHidden: { type: Boolean },
       label: { type: Array },
       icon: { type: String }
@@ -54,4 +69,5 @@ class KaskadiPasswordbox extends KaskadiElement {
     <kaskadi-textbox id="pwd-box" lang="${this.lang}" ?labelHidden="${this.labelHidden}" icon="${this.icon}" .label="${this.label}" spellcheck="false"></kaskadi-textbox>`
   }
 }
+
 customElements.define('kaskadi-passwordbox', KaskadiPasswordbox)
