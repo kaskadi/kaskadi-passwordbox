@@ -58,9 +58,9 @@ This element inherits properties from a base class `KaskadiElement`. To see whic
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| label | `Object` |  | a set of labels that will be displayed for this textbox. Each field in the object reference to a language (f.e. `en`, `de`, `fr`, etc.). |
+| label | `Object` |  | a localized set of labels that will be displayed for this textbox. Each field in the object references a language (f.e. `en`, `de`, `fr`, etc.). |
 | \[icon\] | `string` |  | an icon to display for this textbox. Must be a URL pointing to a public image. |
-| \[labelHidden\] | `boolean` | `false` | control whether the textbox label & icon should be shown. |
+| \[labelHidden\] | `boolean` | `false` | controls whether the textbox label & icon should be shown. |
 
 **Example**  
 ```html
