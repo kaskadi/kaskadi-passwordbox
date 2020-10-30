@@ -10,6 +10,10 @@ module.exports = config => {
         istanbul: { esModules: true }
       }
     },
+    proxies: {
+      '/import-font.css': '/base/import-font.css',
+      '/pwd-font.ttf': '/base/pwd-font.ttf'
+    },
     reporters: ['progress', 'coverage'],
     port: 9876, // karma web server port
     colors: true,
