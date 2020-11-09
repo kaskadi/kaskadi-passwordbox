@@ -71,3 +71,5 @@ class KaskadiPasswordbox extends KaskadiElement {
 }
 
 customElements.define('kaskadi-passwordbox', KaskadiPasswordbox)
+
+// force
