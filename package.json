@@ -1,6 +1,6 @@
 {
   "name": "kaskadi-passwordbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "kaskadi-passwordbox.js",
   "directories": {
@@ -64,6 +64,5 @@
     "mocha": "^8.1.1",
     "standard": "^14.3.4",
     "svg2ttf": "^5.0.0"
-  },
-  "dependencies": {}
+  }
 }
